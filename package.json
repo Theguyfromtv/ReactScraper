@@ -22,6 +22,7 @@
     "express": "^4.16.1",
     "mongoose": "^5.0.11",
     "nodemon": "^1.11.0",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "react-swipe-card": "^0.1.4"
   }
 }

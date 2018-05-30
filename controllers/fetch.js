@@ -5,11 +5,14 @@ var scrape = require("../scripts/scrape");
 
 module.exports = {
   scrapeHeadlines: function(req, res) {
+    //console.log("scraping")
     // scrape the NYT
-    return scrape()
-      .then(function(articles) {
+    return scrape().then(function(articles) {
+       // console.log("articles")
+
         // then insert articles into the db
         return db.Headline.create(articles);
+        //console.log(articles)
       })
       .then(function(dbHeadline) {
         if (dbHeadline.length === 0) {
@@ -23,11 +26,11 @@ module.exports = {
             message: "Added " + dbHeadline.length + " new articles!"
           });
         }
-        console.log(res)
+        //console.log(res)
       })
       .catch(function(err) {
-        // This query won't insert articles with duplicate headlines, but it will error after inserting the others
-        res.json({
+        //console.log(err)
+          res.json({
           message: "Scrape complete!!"
         });
       });

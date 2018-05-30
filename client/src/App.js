@@ -4,6 +4,7 @@ import "./App.css";
 import New from "./pages/New"
 
 class App extends Component {
+  
   render() {
     return (
       <Router>

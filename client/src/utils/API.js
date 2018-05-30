@@ -2,7 +2,7 @@ import axios from "axios";
 
 const API= {
     scrapeArticles: function(){
-      return axios.get("/fetch")
+      return axios.get("/fetch/")
     },
     // Gets all articles
     getArticles: function() {

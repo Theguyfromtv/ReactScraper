@@ -6,6 +6,7 @@ import Gallery from "../../componenets/Gallery/Gallery"
 import ScrapeBtn from "../../componenets/Gallery/ScrapeBtn"
 
 
+
 class New extends Component {
     state={
         articles:[]
@@ -24,12 +25,14 @@ class New extends Component {
        API.getArticles()
         .then(res=>{
             this.setState({articles: [...res.data]});
-            //console.log(res.data)
+            console.log(res.data)
     })
        
     }
     saveArticle=(id)=>{
         API.addSaved(id)
+        //const articles = this.state.articles.filter(article => article.id !== id);
+        //this.setState({ articles:articles });
     }
 
 
@@ -38,14 +41,14 @@ class New extends Component {
             <div>
             <ScrapeBtn scrape={this.scrapeNew}/>
             <Gallery>
-                {this.state.articles.map(article=>
+                {this.state.articles.map(article=>  
                 <Article key={article._id}
                 id={article._id}
                 date={article.date}
                 url={article.url}
                 image={article.img}
-                title={article.title}
-                sum={article.sum}
+                title={article.headline}
+                sum={article.summary}
                 buttonAction={this.saveArticle}
                 buttonTitle="Save">
                 </Article>)}
@@ -58,4 +61,6 @@ class New extends Component {
 }
 
 export default New;
+
+
 
