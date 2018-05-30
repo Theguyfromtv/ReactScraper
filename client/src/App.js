@@ -9,8 +9,10 @@ class App extends Component {
   render() {
     return (
       <Router>
-]         <Route exact path="/" component={New}/>
+        <Switch>
+          <Route exact path="/" component={New}/>
           <Route exact path="/saved" component={Saved}/>
+        </Switch>
       </Router>
     );
   }
