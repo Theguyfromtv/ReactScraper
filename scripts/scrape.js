@@ -38,8 +38,13 @@ var scrape = function() {
         .text()
         .trim();
 
+      var img=$(this)
+        .children(".wide-thumb")
+        .children(".thumb-main")
+        .attr("src")
+
       // So long as our headline and sum and url aren't empty or undefined, do the following
-      if (head && sum && url) {
+      if (head && sum && url && img) {
         // This section uses regular expressions and the trim function to tidy our headlines and summaries
         // We're removing extra lines, extra spacing, extra tabs, etc.. to increase to typographical cleanliness.
         var headNeat = head.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
@@ -50,10 +55,12 @@ var scrape = function() {
         var dataToAdd = {
           headline: headNeat,
           summary: sumNeat,
-          url: url
+          url: url,
+          img:img
         };
 
         articles.push(dataToAdd);
+        console.log(articles)
       }
     });
     return articles;

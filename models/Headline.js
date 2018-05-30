@@ -30,6 +30,10 @@ var headlineSchema = new Schema({
     type: Date,
     default: Date.now
   },
+  img: {
+    type: String,
+    required: true
+  },
   saved: {
     type: Boolean,
     default: false

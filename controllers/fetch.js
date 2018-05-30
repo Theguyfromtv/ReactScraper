@@ -23,6 +23,7 @@ module.exports = {
             message: "Added " + dbHeadline.length + " new articles!"
           });
         }
+        console.log(res)
       })
       .catch(function(err) {
         // This query won't insert articles with duplicate headlines, but it will error after inserting the others
