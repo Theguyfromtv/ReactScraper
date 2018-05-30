@@ -47,7 +47,7 @@ class New extends Component {
         return(
             <div>
             <ScrapeBtn scrape={this.scrapeNew}/>
-            <NavBtn />
+            <NavBtn href="/save" name="See saved articles"/>
             <Gallery>
                 {this.state.articles.map(article=>  
                 <Article key={article._id}
