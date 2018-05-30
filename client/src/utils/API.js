@@ -11,15 +11,15 @@ const API= {
     },
     // Gets the the saved articles
     getSaved: function() {
-      return axios.get("/api/headlines?saved=true");
+      return axios.get("/headlines?saved=true");
     },
     // Saves the article with the given id
     addSaved: function(id) {
-      return axios.put("/api/headlines/" + id);
+      return axios.put("/headlines/" + id);
     },
     // Deletes the article with the given id
     deleteSaved: function(id) {
-      return axios.delete("/api/headlines/", id);
+      return axios.delete("/headlines/"+ id);
     }
   };
 
