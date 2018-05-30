@@ -1,10 +1,10 @@
 
 import React, { Component } from "react";
 import API from "../../utils/API";
-import Article from "../../componenets/Gallery/Article"
-import Gallery from "../../componenets/Gallery/Gallery"
-import ScrapeBtn from "../../componenets/Buttons/ScrapeBtn"
-import NavBtn from "../../componenets/Buttons/NavBtn"
+import Article from "../../components/Gallery/Article"
+import Gallery from "../../components/Gallery/Gallery"
+import ScrapeBtn from "../../components/Buttons/ScrapeBtn"
+import NavBtn from "../../components/Buttons/NavBtn"
 
 
 
