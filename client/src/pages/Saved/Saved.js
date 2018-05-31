@@ -8,7 +8,7 @@ import NavBtn from "../../components/Buttons/NavBtn"
 
 
 
-class New extends Component {
+class Saved extends Component {
     state={
         articles:[]
     }
@@ -58,7 +58,7 @@ class New extends Component {
 
 }
 
-export default New;
+export default Saved;
 
 
 
