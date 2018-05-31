@@ -19,7 +19,7 @@ app.use(routes);
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactheadlines");
 
 app.get('*', (req, res) =>{
-  res.sendFile(path.resolve(__dirname, 'index.html'));
+  res.sendFile(path.resolve(__dirname, '/client/build/index.html'));
 });
 
 // Start the API server
