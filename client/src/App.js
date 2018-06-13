@@ -13,7 +13,7 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path="/" component={New}/>
-          <Route exact path="/saved" component={Saved}/>
+          <Route path="/saved" component={Saved}/>
           <Route component={Nomatch}/>
         </Switch>
       </Router>
