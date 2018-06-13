@@ -15,9 +15,11 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
+//make the server serve up react's index file and use react router
 app.get('*', function (req, res){
   res.sendFile(path.join(__dirname, "/client/build/index.html"));
 })
+
 
 
 
